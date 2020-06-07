@@ -1,0 +1,202 @@
+PODS:
+  - ASN1Decoder (1.3.3)
+  - BigInt (5.0.0)
+  - BluetoothKit (0.4.0)
+  - CryptoSwift (1.3.1)
+  - FaceCropper (1.0.0)
+  - FaceVerifier (0.0.1):
+    - FaceCropper
+  - KeychainSwift (19.0.0)
+  - OrderedDictionary (0.0.1)
+  - PotentASN1 (0.0.1):
+    - BigInt
+    - OrderedDictionary
+    - PotentCodables
+  - PotentCBOR (0.0.1):
+    - PotentCodables
+  - PotentCodables (0.0.1)
+  - PotentJSON (0.0.1):
+    - PotentCodables
+  - QKMRZParser (1.0.1)
+  - Realm (5.0.2):
+    - Realm/Headers (= 5.0.2)
+  - Realm/Headers (5.0.2)
+  - RealmSwift (5.0.2):
+    - Realm (= 5.0.2)
+  - Shield (0.0.1):
+    - PotentCodables
+    - ShieldCrypto
+    - ShieldPKCS
+    - ShieldSecurity
+    - ShieldX500
+    - ShieldX509
+  - ShieldCrypto (0.0.1)
+  - ShieldOID (0.0.1):
+    - PotentASN1
+  - ShieldPKCS (0.0.1):
+    - PotentASN1
+  - ShieldSecurity (0.0.1):
+    - PotentASN1
+    - ShieldCrypto
+    - ShieldOID
+    - ShieldPKCS
+    - ShieldX500
+    - ShieldX509
+    - STRegex
+  - ShieldX500 (0.0.1):
+    - PotentASN1
+    - PotentCodables
+    - ShieldOID
+  - ShieldX509 (0.0.1):
+    - PotentASN1
+    - ShieldCrypto
+    - ShieldPKCS
+    - ShieldX500
+  - STRegex (2.1.1)
+  - SvipeCA (0.0.1):
+    - SvipeReader
+    - SvipeStore
+  - SvipeCommon (0.0.1)
+  - SvipeMRZ (0.0.1):
+    - QKMRZParser
+    - SwiftyTesseract
+  - SvipeReader (0.0.1)
+  - SvipeStore (0.0.1):
+    - ASN1Decoder
+    - BigInt
+    - BluetoothKit
+    - CryptoSwift
+    - KeychainSwift
+    - PotentCBOR
+    - PotentCodables
+    - RealmSwift
+    - Shield
+    - SvipeCommon
+    - SwiftCBOR
+    - SwiftyBeaver
+  - SwiftCBOR (0.4.3)
+  - SwiftyBeaver (1.9.1)
+  - SwiftyTesseract (2.2.2)
+
+DEPENDENCIES:
+  - ASN1Decoder (from `../ASN1Decoder`)
+  - BluetoothKit (from `../BluetoothKit`)
+  - FaceVerifier (from `../FaceVerifier`)
+  - OrderedDictionary (from `../OrderedDictionary`)
+  - PotentASN1 (from `../PotentCodables/`)
+  - PotentCBOR (from `../PotentCodables/`)
+  - PotentCodables (from `../PotentCodables/`)
+  - PotentJSON (from `../PotentCodables/`)
+  - Shield (from `../Shield`)
+  - ShieldCrypto (from `../Shield`)
+  - ShieldOID (from `../Shield`)
+  - ShieldPKCS (from `../Shield`)
+  - ShieldSecurity (from `../Shield`)
+  - ShieldX500 (from `../Shield`)
+  - ShieldX509 (from `../Shield`)
+  - SvipeCA (from `../SvipeCA`)
+  - SvipeCommon (from `../SvipeCommon`)
+  - SvipeMRZ (from `../SvipeMRZ`)
+  - SvipeReader (from `../SvipeReader`)
+  - SvipeStore (from `../SvipeStore`)
+  - SwiftyTesseract (from `https://github.com/svipe/SwiftyTesseract.git`, branch `master`)
+
+SPEC REPOS:
+  trunk:
+    - BigInt
+    - CryptoSwift
+    - FaceCropper
+    - KeychainSwift
+    - QKMRZParser
+    - Realm
+    - RealmSwift
+    - STRegex
+    - SwiftCBOR
+    - SwiftyBeaver
+
+EXTERNAL SOURCES:
+  ASN1Decoder:
+    :path: "../ASN1Decoder"
+  BluetoothKit:
+    :path: "../BluetoothKit"
+  FaceVerifier:
+    :path: "../FaceVerifier"
+  OrderedDictionary:
+    :path: "../OrderedDictionary"
+  PotentASN1:
+    :path: "../PotentCodables/"
+  PotentCBOR:
+    :path: "../PotentCodables/"
+  PotentCodables:
+    :path: "../PotentCodables/"
+  PotentJSON:
+    :path: "../PotentCodables/"
+  Shield:
+    :path: "../Shield"
+  ShieldCrypto:
+    :path: "../Shield"
+  ShieldOID:
+    :path: "../Shield"
+  ShieldPKCS:
+    :path: "../Shield"
+  ShieldSecurity:
+    :path: "../Shield"
+  ShieldX500:
+    :path: "../Shield"
+  ShieldX509:
+    :path: "../Shield"
+  SvipeCA:
+    :path: "../SvipeCA"
+  SvipeCommon:
+    :path: "../SvipeCommon"
+  SvipeMRZ:
+    :path: "../SvipeMRZ"
+  SvipeReader:
+    :path: "../SvipeReader"
+  SvipeStore:
+    :path: "../SvipeStore"
+  SwiftyTesseract:
+    :branch: :master
+    :git: https://github.com/svipe/SwiftyTesseract.git
+
+CHECKOUT OPTIONS:
+  SwiftyTesseract:
+    :commit: f619483eae4e57a53f710989389bf6ab93d9e19f
+    :git: https://github.com/svipe/SwiftyTesseract.git
+
+SPEC CHECKSUMS:
+  ASN1Decoder: c85bbe9d75370dab47503c13c4de213adf3a1442
+  BigInt: 74b4d88367b0e819d9f77393549226d36faeb0d8
+  BluetoothKit: 9d2359d9f5156afc2787a6c0baaa06a8f9b87dc2
+  CryptoSwift: f12f037f6d0fcd6d48c96db0071b653de64e6c4d
+  FaceCropper: 5037221c279db6ae3cea68e76ac4165c85c7c291
+  FaceVerifier: 4079e1be24ff5c755b5e9b82b2168c2f6d2a2047
+  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
+  OrderedDictionary: f6ef8e9fc2ab60b74a508a78dfc49021ae0d379e
+  PotentASN1: d6c1a0d1dabe6aac8530c5baa0e53d81afca05d2
+  PotentCBOR: 21cadc9942b1dea8ab63a1c980d792b4a45373a9
+  PotentCodables: 62d3a0482ba0e6a8422cb25e86abb3ac86b9b7e8
+  PotentJSON: d2ec2755a6ac2101e393e97a0ea7304f6355ed1f
+  QKMRZParser: 07921dbffa7e4064406113731bc0f1f5e6210bce
+  Realm: 6b6f096671b64b04d08974177cabb2ff9343d153
+  RealmSwift: a3db6be0488bf3e1d5314c2956cefe98a65cdd01
+  Shield: dca5255c7af479da19cd4f6fa68d0fa5d40d52bd
+  ShieldCrypto: 1ce20b0512a953c41eb59d9443c5f790ead06a1b
+  ShieldOID: db707df6516781eec31b5a92be1987a4fcb507c6
+  ShieldPKCS: bea3d3c0a000e1fba866b397ed151979cb2e5dec
+  ShieldSecurity: 2c5f83342b2fe23c4c02342d6aeb006bf98986ae
+  ShieldX500: 5ea0db77f5bb76e6619aad394c11ea5cd3b3cc34
+  ShieldX509: 902025764ae1e4a0ae406c3654b881e9216e6dd5
+  STRegex: d49e88d0fe58538d3175fdd989bc1243b9be2a07
+  SvipeCA: 3568a9701a2ff64f797df20d46badb0c192e135a
+  SvipeCommon: 09521621aebf90c3c7a5ba8245fb4d94e7e3b391
+  SvipeMRZ: d67fa36805dc532420660d51329c695518dd51ce
+  SvipeReader: 54cf47372cc88fa1c2e0b8197c9fb94d99b62624
+  SvipeStore: 2e9c807671e4e7f9c24031965a25c25b841e8f53
+  SwiftCBOR: c7d740966575e0fd5d971466de2b6776db3f10c3
+  SwiftyBeaver: a1f5691458561414bcfab51874b2b7445451602b
+  SwiftyTesseract: a05d2c6771872f203a9ba65055cb2a8b6a385552
+
+PODFILE CHECKSUM: 88becd5c799d8f682d06065b29e3074ec58827ca
+
+COCOAPODS: 1.9.1
