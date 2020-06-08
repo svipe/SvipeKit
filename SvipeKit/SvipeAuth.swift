@@ -40,135 +40,6 @@ public protocol PinEntryDelegate {
     func didEnter(pinCode: String)
 }
 
-private enum Colors {
-    static let svipeOrange = UIColor(red: 255/255, green: 128/255, blue: 0/255, alpha: 1.0)
-}
-
-public class SvipeAuthenticationButton: UIButton {
-    
-    public var delegate: SvipeAuthenticationButtonDelegate?
-    static private let svipeIcon = UIImage(named: "SvipeLogo")
-    var status: Status = .unregistered
-    let auth = Authenticator()
-    public var authenticationProtocol: AuthenticationProtocol = .openid
-
-    init() {
-        super.init(frame: .zero)
-        setup()
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-    
-    private func setup() {
-        getStatus()
-        setupButton()
-    }
-    
-    override public func setTitle(_ title: String?, for state: UIControl.State) {
-        
-        print("setTitle \(status.title) ")
-        
-        switch status {
-        case .registered, .unregistered:
-            if title == nil {
-                super.setTitle(status.title, for: state)
-            } else {
-                 super.setTitle(title, for: state)
-            }
-        default:
-             super.setTitle(status.title, for: state)
-        }
-    }
-    
-    func setupButton() {
-        // Only style if Svipe is installed otherwise it is whitelabled
-        switch status {
-        case .unregisteredWithSvipe, .registeredWithSvipe:
-            setTitle(nil, for: .normal)
-            setTitleColor(.white, for: .normal)
-            backgroundColor      = Colors.svipeOrange
-            //titleLabel?.font     = UIFont(name: "MyriadVariable-Concept", size: 18)
-            
-            if layer.cornerRadius == 0 {
-                layer.cornerRadius = 25
-            }
-            
-            if layer.borderWidth == 0 {
-                layer.borderWidth = 1.0
-            }
-            
-            if layer.borderColor == nil {
-                layer.borderColor = UIColor.darkGray.cgColor
-            }
-            
-            let iconView = UIImageView()
-            iconView.tintColor = .white
-            iconView.image = SvipeAuthenticationButton.svipeIcon
-            addSubview(iconView)
-            iconView.translatesAutoresizingMaskIntoConstraints = false
-            iconView.contentMode = .scaleAspectFit
-            
-            if let title = titleLabel {
-                NSLayoutConstraint.activate([
-                    iconView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4.0),
-                    //iconView.trailingAnchor.constraint(equalTo: title.leadingAnchor, constant: 2.0),
-                    iconView.topAnchor.constraint(equalTo: topAnchor, constant: 4.0 ),
-                    iconView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4.0 ),
-                    widthAnchor.constraint(equalToConstant: 200),
-                    heightAnchor.constraint(equalToConstant: 50)
-                ])
-            }
-            
-            titleLabel?.sizeToFit()
-        default:
-            break
-        }
-        //addTarget(self, action: #selector(doAction), for: .touchUpInside)
-    }
-    
-    @objc
-    func doAction() {
-        auth.doAction()
-    }
-    
-    private func getStatus() {
-           
-        if hasSvipe {
-            if isRegistered {
-                status = .registeredWithSvipe
-            } else {
-                status = .unregisteredWithSvipe
-            }
-        } else {
-            if isRegistered {
-                status = .registered
-            } else {
-                status = .unregistered
-            }
-        }
-    }
-    
-    private var hasSvipe: Bool {
-        if let url = URL(string: "svipeid:"), UIApplication.shared.canOpenURL(url) {
-            return true
-        } else {
-            return false
-        }
-    }
-    
-    private var isRegistered: Bool {
-        return false
-    }
-}
-
 @objc
 open class Authenticator: NSObject {
     
@@ -245,8 +116,6 @@ open class Authenticator: NSObject {
         }
     }
     
-    open var shouldPromote = true
-    
     open var requestItems: AppItemsRequests? {
         didSet {
             
@@ -258,7 +127,7 @@ open class Authenticator: NSObject {
     private var currentAction: Action = .mrzInfo
     //private var user: PublicKeyCredentialUserEntity = PublicKeyCredentialUserEntity()
 
-    private var nfcSesionStateObservation: NSKeyValueObservation?
+    private var nfcSessionStateObservation: NSKeyValueObservation?
     private var sceneObserver: SceneObserver?
     private var mrzKey: String = ""
     private var passportModel : NFCPassportModel?
@@ -275,13 +144,7 @@ open class Authenticator: NSObject {
     private let bundle = Bundle(for: Authenticator.self)
 
     private var scanCompletionHandler: ScanHandler?
-    
-    // MARK: - Services
-    
-    /**
-     The WS interface to communicate with the Svipe Backend
-     */
-    
+
     private var mrzScannerView: QKMRZScannerView = QKMRZScannerView()
     private let passportReader = SvipeReader()
     private var faceView: FaceView = FaceView()
@@ -294,7 +157,6 @@ open class Authenticator: NSObject {
     
     @objc
     public func setup() {
-        // Important to initialize and register early
         faceView.mode = .production
         actionSheetView?.delegate = self
         setupObserver()
@@ -302,7 +164,6 @@ open class Authenticator: NSObject {
     
     // Do we have an alternative when keyWindow does not work?
     private func setupObserver() {
-        
         if let window = UIApplication.shared.keyWindow {
             SceneObserver.setupApplication(window: window)
         } else {
@@ -313,12 +174,12 @@ open class Authenticator: NSObject {
     @objc
     public func scanDocument(_ completion: @escaping ScanHandler) {
         scanCompletionHandler = completion
-        begin()
-    }
-    
-    @objc public func begin() {
         doAction()
     }
+    
+    /*
+     The normal flow is according to the switch below
+     */
     
     @objc public func doAction() {
     
@@ -344,18 +205,16 @@ open class Authenticator: NSObject {
         }
     }
 
-       open func cancel() {
-           reset()
-           currentAction = .none
-           dismissActionSheet()
-       }
+    open func cancel() {
+        reset()
+        currentAction = .none
+        dismissActionSheet()
+    }
        
-       @IBAction func didTapBackground(_ sender: Any) {
-          cancel()
-       }
+    @IBAction func didTapBackground(_ sender: Any) {
+        cancel()
+    }
            
-      
-        
     private func set(action: Action, message: String, image: UIImage? = nil, mrzDelegate: QKMRZScannerViewDelegate? = nil, faceViewDelegate: FaceViewDelegate) {
         
         guard let actionSheet = actionSheetView else {
@@ -390,7 +249,7 @@ open class Authenticator: NSObject {
         }
     }
     
-    // MARK: - Registration
+    // MARK: - Actions
        
     @objc private func errorMessage(msg: Any?) {
            
@@ -766,7 +625,9 @@ extension Authenticator: FaceViewDelegate {
     }
 
     public func faceView(_ faceView: FaceView, didFindMatchingFace: Bool) {
+        
         print("Matching face!")
+        
         if didFindMatchingFace {
             issuing()
         } else {

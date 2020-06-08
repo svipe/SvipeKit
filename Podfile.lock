@@ -3,6 +3,7 @@ PODS:
   - BigInt (5.0.0)
   - BluetoothKit (0.4.0)
   - CryptoSwift (1.3.1)
+  - DeepLinkKit (1.5.1)
   - FaceCropper (1.0.0)
   - FaceVerifier (0.0.1):
     - FaceCropper
@@ -17,6 +18,15 @@ PODS:
   - PotentCodables (0.0.1)
   - PotentJSON (0.0.1):
     - PotentCodables
+  - PromiseKit (6.13.1):
+    - PromiseKit/CorePromise (= 6.13.1)
+    - PromiseKit/Foundation (= 6.13.1)
+    - PromiseKit/UIKit (= 6.13.1)
+  - PromiseKit/CorePromise (6.13.1)
+  - PromiseKit/Foundation (6.13.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.13.1):
+    - PromiseKit/CorePromise
   - QKMRZParser (1.0.1)
   - Realm (5.0.2):
     - Realm/Headers (= 5.0.2)
@@ -54,9 +64,19 @@ PODS:
     - ShieldX500
   - STRegex (2.1.1)
   - SvipeCA (0.0.1):
+    - SvipeCommon
     - SvipeReader
     - SvipeStore
   - SvipeCommon (0.0.1)
+  - SvipeKit (0.0.1):
+    - DeepLinkKit
+    - FaceVerifier
+    - PromiseKit
+    - SvipeCA
+    - SvipeCommon
+    - SvipeMRZ
+    - SvipeReader
+    - SvipeStore
   - SvipeMRZ (0.0.1):
     - QKMRZParser
     - SwiftyTesseract
@@ -79,23 +99,24 @@ PODS:
   - SwiftyTesseract (2.2.2)
 
 DEPENDENCIES:
-  - ASN1Decoder (from `../ASN1Decoder`)
-  - BluetoothKit (from `../BluetoothKit`)
+  - ASN1Decoder (from `https://github.com/filom/ASN1Decoder`, branch `master`)
+  - BluetoothKit (from `https://github.com/svipe/BluetoothKit.git`, branch `master`)
   - FaceVerifier (from `../FaceVerifier`)
-  - OrderedDictionary (from `../OrderedDictionary`)
-  - PotentASN1 (from `../PotentCodables/`)
-  - PotentCBOR (from `../PotentCodables/`)
-  - PotentCodables (from `../PotentCodables/`)
-  - PotentJSON (from `../PotentCodables/`)
-  - Shield (from `../Shield`)
-  - ShieldCrypto (from `../Shield`)
-  - ShieldOID (from `../Shield`)
-  - ShieldPKCS (from `../Shield`)
-  - ShieldSecurity (from `../Shield`)
-  - ShieldX500 (from `../Shield`)
-  - ShieldX509 (from `../Shield`)
+  - OrderedDictionary (from `https://github.com/svipe/OrderedDictionary.git`, branch `master`)
+  - PotentASN1 (from `https://github.com/svipe/PotentCodables.git`, branch `master`)
+  - PotentCBOR (from `https://github.com/svipe/PotentCodables.git`, branch `master`)
+  - PotentCodables (from `https://github.com/svipe/PotentCodables.git`, branch `master`)
+  - PotentJSON (from `https://github.com/svipe/PotentCodables.git`, branch `master`)
+  - Shield (from `https://github.com/svipe/Shield.git`, branch `master`)
+  - ShieldCrypto (from `https://github.com/svipe/Shield.git`, branch `master`)
+  - ShieldOID (from `https://github.com/svipe/Shield.git`, branch `master`)
+  - ShieldPKCS (from `https://github.com/svipe/Shield.git`, branch `master`)
+  - ShieldSecurity (from `https://github.com/svipe/Shield.git`, branch `master`)
+  - ShieldX500 (from `https://github.com/svipe/Shield.git`, branch `master`)
+  - ShieldX509 (from `https://github.com/svipe/Shield.git`, branch `master`)
   - SvipeCA (from `../SvipeCA`)
   - SvipeCommon (from `../SvipeCommon`)
+  - SvipeKit (from `.`)
   - SvipeMRZ (from `../SvipeMRZ`)
   - SvipeReader (from `../SvipeReader`)
   - SvipeStore (from `../SvipeStore`)
@@ -105,8 +126,10 @@ SPEC REPOS:
   trunk:
     - BigInt
     - CryptoSwift
+    - DeepLinkKit
     - FaceCropper
     - KeychainSwift
+    - PromiseKit
     - QKMRZParser
     - Realm
     - RealmSwift
@@ -116,39 +139,55 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   ASN1Decoder:
-    :path: "../ASN1Decoder"
+    :branch: :master
+    :git: https://github.com/filom/ASN1Decoder
   BluetoothKit:
-    :path: "../BluetoothKit"
+    :branch: :master
+    :git: https://github.com/svipe/BluetoothKit.git
   FaceVerifier:
     :path: "../FaceVerifier"
   OrderedDictionary:
-    :path: "../OrderedDictionary"
+    :branch: :master
+    :git: https://github.com/svipe/OrderedDictionary.git
   PotentASN1:
-    :path: "../PotentCodables/"
+    :branch: :master
+    :git: https://github.com/svipe/PotentCodables.git
   PotentCBOR:
-    :path: "../PotentCodables/"
+    :branch: :master
+    :git: https://github.com/svipe/PotentCodables.git
   PotentCodables:
-    :path: "../PotentCodables/"
+    :branch: :master
+    :git: https://github.com/svipe/PotentCodables.git
   PotentJSON:
-    :path: "../PotentCodables/"
+    :branch: :master
+    :git: https://github.com/svipe/PotentCodables.git
   Shield:
-    :path: "../Shield"
+    :branch: :master
+    :git: https://github.com/svipe/Shield.git
   ShieldCrypto:
-    :path: "../Shield"
+    :branch: :master
+    :git: https://github.com/svipe/Shield.git
   ShieldOID:
-    :path: "../Shield"
+    :branch: :master
+    :git: https://github.com/svipe/Shield.git
   ShieldPKCS:
-    :path: "../Shield"
+    :branch: :master
+    :git: https://github.com/svipe/Shield.git
   ShieldSecurity:
-    :path: "../Shield"
+    :branch: :master
+    :git: https://github.com/svipe/Shield.git
   ShieldX500:
-    :path: "../Shield"
+    :branch: :master
+    :git: https://github.com/svipe/Shield.git
   ShieldX509:
-    :path: "../Shield"
+    :branch: :master
+    :git: https://github.com/svipe/Shield.git
   SvipeCA:
     :path: "../SvipeCA"
   SvipeCommon:
     :path: "../SvipeCommon"
+  SvipeKit:
+    :path: "."
   SvipeMRZ:
     :path: "../SvipeMRZ"
   SvipeReader:
@@ -160,6 +199,48 @@ EXTERNAL SOURCES:
     :git: https://github.com/svipe/SwiftyTesseract.git
 
 CHECKOUT OPTIONS:
+  ASN1Decoder:
+    :commit: fa6e07fcc46814f34c49dc212246739372e65f96
+    :git: https://github.com/filom/ASN1Decoder
+  BluetoothKit:
+    :commit: 046246643a7bb00cd8736bc0d5f6cc2e9d622dde
+    :git: https://github.com/svipe/BluetoothKit.git
+  OrderedDictionary:
+    :commit: 372b7a10a916d049fe35aa14a01081dd6e25ca10
+    :git: https://github.com/svipe/OrderedDictionary.git
+  PotentASN1:
+    :commit: 79ca1edae4e1d7540bd19ce1e9782cc0ab5ec671
+    :git: https://github.com/svipe/PotentCodables.git
+  PotentCBOR:
+    :commit: 79ca1edae4e1d7540bd19ce1e9782cc0ab5ec671
+    :git: https://github.com/svipe/PotentCodables.git
+  PotentCodables:
+    :commit: 79ca1edae4e1d7540bd19ce1e9782cc0ab5ec671
+    :git: https://github.com/svipe/PotentCodables.git
+  PotentJSON:
+    :commit: 79ca1edae4e1d7540bd19ce1e9782cc0ab5ec671
+    :git: https://github.com/svipe/PotentCodables.git
+  Shield:
+    :commit: 02c8c81ac13a92ef3dc3f7083383eff31eb0d2ae
+    :git: https://github.com/svipe/Shield.git
+  ShieldCrypto:
+    :commit: 02c8c81ac13a92ef3dc3f7083383eff31eb0d2ae
+    :git: https://github.com/svipe/Shield.git
+  ShieldOID:
+    :commit: 02c8c81ac13a92ef3dc3f7083383eff31eb0d2ae
+    :git: https://github.com/svipe/Shield.git
+  ShieldPKCS:
+    :commit: 02c8c81ac13a92ef3dc3f7083383eff31eb0d2ae
+    :git: https://github.com/svipe/Shield.git
+  ShieldSecurity:
+    :commit: 02c8c81ac13a92ef3dc3f7083383eff31eb0d2ae
+    :git: https://github.com/svipe/Shield.git
+  ShieldX500:
+    :commit: 02c8c81ac13a92ef3dc3f7083383eff31eb0d2ae
+    :git: https://github.com/svipe/Shield.git
+  ShieldX509:
+    :commit: 02c8c81ac13a92ef3dc3f7083383eff31eb0d2ae
+    :git: https://github.com/svipe/Shield.git
   SwiftyTesseract:
     :commit: f619483eae4e57a53f710989389bf6ab93d9e19f
     :git: https://github.com/svipe/SwiftyTesseract.git
@@ -169,14 +250,16 @@ SPEC CHECKSUMS:
   BigInt: 74b4d88367b0e819d9f77393549226d36faeb0d8
   BluetoothKit: 9d2359d9f5156afc2787a6c0baaa06a8f9b87dc2
   CryptoSwift: f12f037f6d0fcd6d48c96db0071b653de64e6c4d
+  DeepLinkKit: 9f300348cbb20ef8389a5018a57d8c9952b1831c
   FaceCropper: 5037221c279db6ae3cea68e76ac4165c85c7c291
-  FaceVerifier: 4079e1be24ff5c755b5e9b82b2168c2f6d2a2047
+  FaceVerifier: 2a3312219fe37af33992271f6d16cb1df6440996
   KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
-  OrderedDictionary: f6ef8e9fc2ab60b74a508a78dfc49021ae0d379e
+  OrderedDictionary: f485269ff07966397900f549492b84596d00188c
   PotentASN1: d6c1a0d1dabe6aac8530c5baa0e53d81afca05d2
   PotentCBOR: 21cadc9942b1dea8ab63a1c980d792b4a45373a9
   PotentCodables: 62d3a0482ba0e6a8422cb25e86abb3ac86b9b7e8
   PotentJSON: d2ec2755a6ac2101e393e97a0ea7304f6355ed1f
+  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   QKMRZParser: 07921dbffa7e4064406113731bc0f1f5e6210bce
   Realm: 6b6f096671b64b04d08974177cabb2ff9343d153
   RealmSwift: a3db6be0488bf3e1d5314c2956cefe98a65cdd01
@@ -188,8 +271,9 @@ SPEC CHECKSUMS:
   ShieldX500: 5ea0db77f5bb76e6619aad394c11ea5cd3b3cc34
   ShieldX509: 902025764ae1e4a0ae406c3654b881e9216e6dd5
   STRegex: d49e88d0fe58538d3175fdd989bc1243b9be2a07
-  SvipeCA: 3568a9701a2ff64f797df20d46badb0c192e135a
+  SvipeCA: 77757566d0756b410870ba143d4ee9487a0e159a
   SvipeCommon: 09521621aebf90c3c7a5ba8245fb4d94e7e3b391
+  SvipeKit: 31ad2dfbb9ee80bfdb70f13df18a6d6408ae43ed
   SvipeMRZ: d67fa36805dc532420660d51329c695518dd51ce
   SvipeReader: 54cf47372cc88fa1c2e0b8197c9fb94d99b62624
   SvipeStore: 2e9c807671e4e7f9c24031965a25c25b841e8f53
@@ -197,6 +281,6 @@ SPEC CHECKSUMS:
   SwiftyBeaver: a1f5691458561414bcfab51874b2b7445451602b
   SwiftyTesseract: a05d2c6771872f203a9ba65055cb2a8b6a385552
 
-PODFILE CHECKSUM: 88becd5c799d8f682d06065b29e3074ec58827ca
+PODFILE CHECKSUM: 23d3675fc6e4908883dfebadcfa53e3d6ba2f807
 
 COCOAPODS: 1.9.1

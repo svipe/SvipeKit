@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C9DA479248E78AA002A677B /* SvipeAuthenticationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9DA478248E78AA002A677B /* SvipeAuthenticationButton.swift */; };
 		0CC1E846248CD7E000362863 /* SvipeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC1E83C248CD7E000362863 /* SvipeKit.framework */; };
 		0CC1E84B248CD7E000362863 /* SvipeKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1E84A248CD7E000362863 /* SvipeKitTests.swift */; };
 		0CC1E84D248CD7E000362863 /* SvipeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CC1E83F248CD7E000362863 /* SvipeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -16,23 +17,25 @@
 		0CC1E873248CD89900362863 /* SPPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1E85A248CD89800362863 /* SPPinView.swift */; };
 		0CC1E874248CD89900362863 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CC1E85C248CD89800362863 /* Assets.xcassets */; };
 		0CC1E875248CD89900362863 /* UIViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1E85E248CD89800362863 /* UIViewAdditions.swift */; };
-		0CC1E876248CD89900362863 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1E85F248CD89800362863 /* Types.swift */; };
 		0CC1E877248CD89900362863 /* SceneObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1E860248CD89800362863 /* SceneObserver.swift */; };
 		0CC1E878248CD89900362863 /* SvipeAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1E861248CD89900362863 /* SvipeAuth.swift */; };
 		0CC1E879248CD89900362863 /* ConsentSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC1E863248CD89900362863 /* ConsentSheetView.xib */; };
 		0CC1E87A248CD89900362863 /* ConsentSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1E864248CD89900362863 /* ConsentSheetView.swift */; };
 		0CC1E87B248CD89900362863 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1E865248CD89900362863 /* TableViewCell.swift */; };
-		0CC1E87C248CD89900362863 /* PromotionSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC1E866248CD89900362863 /* PromotionSheetView.xib */; };
 		0CC1E87D248CD89900362863 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC1E867248CD89900362863 /* TableViewCell.xib */; };
 		0CC1E87E248CD89900362863 /* EngagementSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1E868248CD89900362863 /* EngagementSheetView.swift */; };
-		0CC1E87F248CD89900362863 /* PromotionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1E869248CD89900362863 /* PromotionSheetView.swift */; };
 		0CC1E880248CD89900362863 /* ActionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1E86A248CD89900362863 /* ActionSheetView.swift */; };
-		0CC1E881248CD89900362863 /* InteractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1E86B248CD89900362863 /* InteractionViewController.swift */; };
 		0CC1E882248CD89900362863 /* ActionSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC1E86C248CD89900362863 /* ActionSheetView.xib */; };
-		0CC1E883248CD89900362863 /* OriginalActionSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC1E86D248CD89900362863 /* OriginalActionSheetView.xib */; };
 		0CC1E884248CD89900362863 /* EngagementSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC1E86E248CD89900362863 /* EngagementSheetView.xib */; };
 		0CC1E885248CD89900362863 /* SvipeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1E86F248CD89900362863 /* SvipeKit.swift */; };
 		0CC1E8D2248CE5D200362863 /* SvipeKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 0CC1E8D1248CE5D200362863 /* SvipeKit.podspec */; };
+		0CC1E8E8248CFDCC00362863 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1E8E7248CFDCC00362863 /* AppDelegate.swift */; };
+		0CC1E8EA248CFDCC00362863 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1E8E9248CFDCC00362863 /* SceneDelegate.swift */; };
+		0CC1E8EC248CFDCC00362863 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1E8EB248CFDCC00362863 /* ViewController.swift */; };
+		0CC1E8EF248CFDCC00362863 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC1E8ED248CFDCC00362863 /* Main.storyboard */; };
+		0CC1E8F1248CFDCF00362863 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CC1E8F0248CFDCF00362863 /* Assets.xcassets */; };
+		0CC1E8F4248CFDCF00362863 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC1E8F2248CFDCF00362863 /* LaunchScreen.storyboard */; };
+		35B751AEE35796C91EA9BACB /* Pods_SvipeKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70263EAABB1ADD7009D95C2D /* Pods_SvipeKit_Example.framework */; };
 		60EEE9B4257ADA173B70ACB4 /* Pods_SvipeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB663127878EE5276D5C4DA6 /* Pods_SvipeKit.framework */; };
 		C70181E7A4B5F7AA96559817 /* Pods_SvipeKit_SvipeKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBD871718D787DD3EB5EE42E /* Pods_SvipeKit_SvipeKitTests.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C9DA478248E78AA002A677B /* SvipeAuthenticationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvipeAuthenticationButton.swift; sourceTree = "<group>"; };
 		0CC1E83C248CD7E000362863 /* SvipeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SvipeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC1E83F248CD7E000362863 /* SvipeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SvipeKit.h; sourceTree = "<group>"; };
 		0CC1E840248CD7E000362863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,27 +64,35 @@
 		0CC1E85A248CD89800362863 /* SPPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPPinView.swift; sourceTree = "<group>"; };
 		0CC1E85C248CD89800362863 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CC1E85E248CD89800362863 /* UIViewAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAdditions.swift; sourceTree = "<group>"; };
-		0CC1E85F248CD89800362863 /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		0CC1E860248CD89800362863 /* SceneObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneObserver.swift; sourceTree = "<group>"; };
 		0CC1E861248CD89900362863 /* SvipeAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SvipeAuth.swift; sourceTree = "<group>"; };
 		0CC1E863248CD89900362863 /* ConsentSheetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsentSheetView.xib; sourceTree = "<group>"; };
 		0CC1E864248CD89900362863 /* ConsentSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentSheetView.swift; sourceTree = "<group>"; };
 		0CC1E865248CD89900362863 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		0CC1E866248CD89900362863 /* PromotionSheetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromotionSheetView.xib; sourceTree = "<group>"; };
 		0CC1E867248CD89900362863 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		0CC1E868248CD89900362863 /* EngagementSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngagementSheetView.swift; sourceTree = "<group>"; };
-		0CC1E869248CD89900362863 /* PromotionSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionSheetView.swift; sourceTree = "<group>"; };
 		0CC1E86A248CD89900362863 /* ActionSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetView.swift; sourceTree = "<group>"; };
-		0CC1E86B248CD89900362863 /* InteractionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionViewController.swift; sourceTree = "<group>"; };
 		0CC1E86C248CD89900362863 /* ActionSheetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionSheetView.xib; sourceTree = "<group>"; };
-		0CC1E86D248CD89900362863 /* OriginalActionSheetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OriginalActionSheetView.xib; sourceTree = "<group>"; };
 		0CC1E86E248CD89900362863 /* EngagementSheetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EngagementSheetView.xib; sourceTree = "<group>"; };
 		0CC1E86F248CD89900362863 /* SvipeKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SvipeKit.swift; sourceTree = "<group>"; };
 		0CC1E8D1248CE5D200362863 /* SvipeKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SvipeKit.podspec; sourceTree = "<group>"; };
+		0CC1E8E5248CFDCC00362863 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CC1E8E7248CFDCC00362863 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0CC1E8E9248CFDCC00362863 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0CC1E8EB248CFDCC00362863 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0CC1E8EE248CFDCC00362863 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0CC1E8F0248CFDCF00362863 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0CC1E8F3248CFDCF00362863 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0CC1E8F5248CFDCF00362863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70263EAABB1ADD7009D95C2D /* Pods_SvipeKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SvipeKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73BAD27333543B33944994D9 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		771ED0D77EF2C3B84071DAB0 /* Pods-SvipeKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SvipeKit.release.xcconfig"; path = "Target Support Files/Pods-SvipeKit/Pods-SvipeKit.release.xcconfig"; sourceTree = "<group>"; };
 		802513B1D51A1EE8693DE307 /* Pods-SvipeKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SvipeKit.debug.xcconfig"; path = "Target Support Files/Pods-SvipeKit/Pods-SvipeKit.debug.xcconfig"; sourceTree = "<group>"; };
 		9F46835D4603B5681755A829 /* Pods-SvipeKit-SvipeKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SvipeKit-SvipeKitTests.debug.xcconfig"; path = "Target Support Files/Pods-SvipeKit-SvipeKitTests/Pods-SvipeKit-SvipeKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A3E16558BD78A695B3920261 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C2BF516349C2285E13CC3230 /* Pods-SvipeKit-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SvipeKit-Example.debug.xcconfig"; path = "Target Support Files/Pods-SvipeKit-Example/Pods-SvipeKit-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CB663127878EE5276D5C4DA6 /* Pods_SvipeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SvipeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4948F1264165FE4DEFBB557 /* Pods-SvipeKit-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SvipeKit-Example.release.xcconfig"; path = "Target Support Files/Pods-SvipeKit-Example/Pods-SvipeKit-Example.release.xcconfig"; sourceTree = "<group>"; };
 		D57C18EFC6EF1D725EEEEA5B /* Pods-SvipeKit-SvipeKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SvipeKit-SvipeKitTests.release.xcconfig"; path = "Target Support Files/Pods-SvipeKit-SvipeKitTests/Pods-SvipeKit-SvipeKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		FBD871718D787DD3EB5EE42E /* Pods_SvipeKit_SvipeKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SvipeKit_SvipeKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -103,6 +115,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0CC1E8E2248CFDCC00362863 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35B751AEE35796C91EA9BACB /* Pods_SvipeKit_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -112,6 +132,7 @@
 				0CC1E8D1248CE5D200362863 /* SvipeKit.podspec */,
 				0CC1E83E248CD7E000362863 /* SvipeKit */,
 				0CC1E849248CD7E000362863 /* SvipeKitTests */,
+				0CC1E8E6248CFDCC00362863 /* Example */,
 				0CC1E83D248CD7E000362863 /* Products */,
 				10C881D7B4F2D9BC1BF496FD /* Pods */,
 				83BF9FC2D0C033B85A8CFD38 /* Frameworks */,
@@ -123,6 +144,7 @@
 			children = (
 				0CC1E83C248CD7E000362863 /* SvipeKit.framework */,
 				0CC1E845248CD7E000362863 /* SvipeKitTests.xctest */,
+				0CC1E8E5248CFDCC00362863 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,15 +154,12 @@
 			children = (
 				0CC1E862248CD89900362863 /* ActionSheet */,
 				0CC1E85B248CD89800362863 /* Assets */,
-				0CC1E85D248CD89800362863 /* Extensions */,
-				0CC1E856248CD89800362863 /* NamedColors.swift */,
-				0CC1E860248CD89800362863 /* SceneObserver.swift */,
 				0CC1E857248CD89800362863 /* SpinView */,
 				0CC1E861248CD89900362863 /* SvipeAuth.swift */,
 				0CC1E86F248CD89900362863 /* SvipeKit.swift */,
-				0CC1E85F248CD89800362863 /* Types.swift */,
 				0CC1E83F248CD7E000362863 /* SvipeKit.h */,
 				0CC1E840248CD7E000362863 /* Info.plist */,
+				0C9DA478248E78AA002A677B /* SvipeAuthenticationButton.swift */,
 			);
 			path = SvipeKit;
 			sourceTree = "<group>";
@@ -172,31 +191,36 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		0CC1E85D248CD89800362863 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				0CC1E85E248CD89800362863 /* UIViewAdditions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		0CC1E862248CD89900362863 /* ActionSheet */ = {
 			isa = PBXGroup;
 			children = (
-				0CC1E863248CD89900362863 /* ConsentSheetView.xib */,
-				0CC1E864248CD89900362863 /* ConsentSheetView.swift */,
-				0CC1E865248CD89900362863 /* TableViewCell.swift */,
-				0CC1E866248CD89900362863 /* PromotionSheetView.xib */,
-				0CC1E867248CD89900362863 /* TableViewCell.xib */,
-				0CC1E868248CD89900362863 /* EngagementSheetView.swift */,
-				0CC1E869248CD89900362863 /* PromotionSheetView.swift */,
+				0CC1E85E248CD89800362863 /* UIViewAdditions.swift */,
+				0CC1E856248CD89800362863 /* NamedColors.swift */,
 				0CC1E86A248CD89900362863 /* ActionSheetView.swift */,
-				0CC1E86B248CD89900362863 /* InteractionViewController.swift */,
 				0CC1E86C248CD89900362863 /* ActionSheetView.xib */,
-				0CC1E86D248CD89900362863 /* OriginalActionSheetView.xib */,
+				0CC1E864248CD89900362863 /* ConsentSheetView.swift */,
+				0CC1E863248CD89900362863 /* ConsentSheetView.xib */,
+				0CC1E860248CD89800362863 /* SceneObserver.swift */,
+				0CC1E868248CD89900362863 /* EngagementSheetView.swift */,
 				0CC1E86E248CD89900362863 /* EngagementSheetView.xib */,
+				0CC1E865248CD89900362863 /* TableViewCell.swift */,
+				0CC1E867248CD89900362863 /* TableViewCell.xib */,
 			);
 			path = ActionSheet;
+			sourceTree = "<group>";
+		};
+		0CC1E8E6248CFDCC00362863 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				0CC1E8E7248CFDCC00362863 /* AppDelegate.swift */,
+				0CC1E8E9248CFDCC00362863 /* SceneDelegate.swift */,
+				0CC1E8EB248CFDCC00362863 /* ViewController.swift */,
+				0CC1E8ED248CFDCC00362863 /* Main.storyboard */,
+				0CC1E8F0248CFDCF00362863 /* Assets.xcassets */,
+				0CC1E8F2248CFDCF00362863 /* LaunchScreen.storyboard */,
+				0CC1E8F5248CFDCF00362863 /* Info.plist */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 		10C881D7B4F2D9BC1BF496FD /* Pods */ = {
@@ -206,6 +230,10 @@
 				771ED0D77EF2C3B84071DAB0 /* Pods-SvipeKit.release.xcconfig */,
 				9F46835D4603B5681755A829 /* Pods-SvipeKit-SvipeKitTests.debug.xcconfig */,
 				D57C18EFC6EF1D725EEEEA5B /* Pods-SvipeKit-SvipeKitTests.release.xcconfig */,
+				A3E16558BD78A695B3920261 /* Pods-Example.debug.xcconfig */,
+				73BAD27333543B33944994D9 /* Pods-Example.release.xcconfig */,
+				C2BF516349C2285E13CC3230 /* Pods-SvipeKit-Example.debug.xcconfig */,
+				D4948F1264165FE4DEFBB557 /* Pods-SvipeKit-Example.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -215,6 +243,7 @@
 			children = (
 				CB663127878EE5276D5C4DA6 /* Pods_SvipeKit.framework */,
 				FBD871718D787DD3EB5EE42E /* Pods_SvipeKit_SvipeKitTests.framework */,
+				70263EAABB1ADD7009D95C2D /* Pods_SvipeKit_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -272,6 +301,25 @@
 			productReference = 0CC1E845248CD7E000362863 /* SvipeKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		0CC1E8E4248CFDCC00362863 /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CC1E8F6248CFDCF00362863 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				4CA635A31867CC498E1466DF /* [CP] Check Pods Manifest.lock */,
+				0CC1E8E1248CFDCC00362863 /* Sources */,
+				0CC1E8E2248CFDCC00362863 /* Frameworks */,
+				0CC1E8E3248CFDCC00362863 /* Resources */,
+				1F40C9FD061E786676DA2D4A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Example;
+			productName = Example;
+			productReference = 0CC1E8E5248CFDCC00362863 /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -287,6 +335,9 @@
 						LastSwiftMigration = 1150;
 					};
 					0CC1E844248CD7E000362863 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					0CC1E8E4248CFDCC00362863 = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
@@ -306,6 +357,7 @@
 			targets = (
 				0CC1E83B248CD7E000362863 /* SvipeKit */,
 				0CC1E844248CD7E000362863 /* SvipeKitTests */,
+				0CC1E8E4248CFDCC00362863 /* Example */,
 			);
 		};
 /* End PBXProject section */
@@ -317,9 +369,7 @@
 			files = (
 				0CC1E874248CD89900362863 /* Assets.xcassets in Resources */,
 				0CC1E87D248CD89900362863 /* TableViewCell.xib in Resources */,
-				0CC1E87C248CD89900362863 /* PromotionSheetView.xib in Resources */,
 				0CC1E8D2248CE5D200362863 /* SvipeKit.podspec in Resources */,
-				0CC1E883248CD89900362863 /* OriginalActionSheetView.xib in Resources */,
 				0CC1E884248CD89900362863 /* EngagementSheetView.xib in Resources */,
 				0CC1E882248CD89900362863 /* ActionSheetView.xib in Resources */,
 				0CC1E879248CD89900362863 /* ConsentSheetView.xib in Resources */,
@@ -330,6 +380,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CC1E8E3248CFDCC00362863 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CC1E8F4248CFDCF00362863 /* LaunchScreen.storyboard in Resources */,
+				0CC1E8F1248CFDCF00362863 /* Assets.xcassets in Resources */,
+				0CC1E8EF248CFDCC00362863 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +418,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		1F40C9FD061E786676DA2D4A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SvipeKit-Example/Pods-SvipeKit-Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		20EA1D1D691344CDF72136B3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -380,17 +455,37 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4CA635A31867CC498E1466DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SvipeKit-Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F0CB14E461009C66ACD5A8BD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SvipeKit-SvipeKitTests/Pods-SvipeKit-SvipeKitTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SvipeKit-SvipeKitTests/Pods-SvipeKit-SvipeKitTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -406,14 +501,12 @@
 			files = (
 				0CC1E871248CD89900362863 /* SPKeyBoardAvoiding.swift in Sources */,
 				0CC1E870248CD89900362863 /* NamedColors.swift in Sources */,
-				0CC1E87F248CD89900362863 /* PromotionSheetView.swift in Sources */,
 				0CC1E872248CD89900362863 /* SPView.swift in Sources */,
 				0CC1E878248CD89900362863 /* SvipeAuth.swift in Sources */,
-				0CC1E876248CD89900362863 /* Types.swift in Sources */,
 				0CC1E87B248CD89900362863 /* TableViewCell.swift in Sources */,
 				0CC1E877248CD89900362863 /* SceneObserver.swift in Sources */,
 				0CC1E873248CD89900362863 /* SPPinView.swift in Sources */,
-				0CC1E881248CD89900362863 /* InteractionViewController.swift in Sources */,
+				0C9DA479248E78AA002A677B /* SvipeAuthenticationButton.swift in Sources */,
 				0CC1E875248CD89900362863 /* UIViewAdditions.swift in Sources */,
 				0CC1E87E248CD89900362863 /* EngagementSheetView.swift in Sources */,
 				0CC1E87A248CD89900362863 /* ConsentSheetView.swift in Sources */,
@@ -430,6 +523,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0CC1E8E1248CFDCC00362863 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CC1E8EC248CFDCC00362863 /* ViewController.swift in Sources */,
+				0CC1E8E8248CFDCC00362863 /* AppDelegate.swift in Sources */,
+				0CC1E8EA248CFDCC00362863 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -439,6 +542,25 @@
 			targetProxy = 0CC1E847248CD7E000362863 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0CC1E8ED248CFDCC00362863 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CC1E8EE248CFDCC00362863 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0CC1E8F2248CFDCF00362863 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CC1E8F3248CFDCF00362863 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0CC1E84E248CD7E000362863 /* Debug */ = {
@@ -654,6 +776,48 @@
 			};
 			name = Release;
 		};
+		0CC1E8F7248CFDCF00362863 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2BF516349C2285E13CC3230 /* Pods-SvipeKit-Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 22PS7P6M6M;
+				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.svipe.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0CC1E8F8248CFDCF00362863 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4948F1264165FE4DEFBB557 /* Pods-SvipeKit-Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 22PS7P6M6M;
+				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.svipe.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -680,6 +844,15 @@
 			buildConfigurations = (
 				0CC1E854248CD7E000362863 /* Debug */,
 				0CC1E855248CD7E000362863 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CC1E8F6248CFDCF00362863 /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CC1E8F7248CFDCF00362863 /* Debug */,
+				0CC1E8F8248CFDCF00362863 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

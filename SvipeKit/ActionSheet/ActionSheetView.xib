@@ -36,7 +36,7 @@
                                 <action selector="svipeVerification:" destination="iN0-l3-epB" eventType="touchUpInside" id="L8r-kU-g8X"/>
                             </connections>
                         </button>
-                        <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eVQ-ev-4IR" customClass="QKMRZScannerView" customModule="MRZScanner">
+                        <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eVQ-ev-4IR" customClass="QKMRZScannerView" customModule="SvipeMRZ">
                             <rect key="frame" x="30" y="8" width="306" height="226"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

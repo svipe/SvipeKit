@@ -608,3 +608,21 @@ class ActionSheetView: UIView {
     }
 }
 
+
+extension NamedColor {
+    
+    /// The border color of the action sheet action view when no operation is done.
+    static var actionSheetIdleColor = UIColor.white
+    
+    /// The border color of the action sheet action view when a touch is required for a operation to continue.
+    static var actionSheetTouchColor = UIColorFrom(hex: 0xBAE950)
+    
+    /// The border color of the action sheet action view when the action sheet is set on a processing state.
+    static var actionSheetProcessingColor = UIColorFrom(hex: 0x76D6FF)
+    
+    /// The border color of the action sheet action view when the action sheet is set on a processing state.
+    static var actionSheetErrorColor = UIColor.systemRed
+
+}
+
+
