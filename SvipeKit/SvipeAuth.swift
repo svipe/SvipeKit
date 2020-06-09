@@ -477,8 +477,8 @@ open class Authenticator: NSObject {
             })
             
             // Set the masterListURL on the Passport Reader to allow auto passport verification
-            let masterListURL = bundle.url(forResource: "masterList", withExtension: ".pem")!
-            passportReader.setMasterListURL( masterListURL )
+            //let masterListURL = bundle.url(forResource: "masterList", withExtension: ".pem")!
+            //passportReader.setMasterListURL( masterListURL )
                
             passportReader.readPassport(mrzKey: mrzKey, customDisplayMessage: { (displayMessage) in
                 switch displayMessage {

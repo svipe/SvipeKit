@@ -213,6 +213,7 @@ class ActionSheetView: UIView {
         faceImageView.isHidden = false
         mrzView.isHidden = true
         faceView.isHidden = true
+        faceView.didMatch = false
         keyActionContainerView.isHidden = false
         borderView.isHidden = false
         pinView.isHidden = true
