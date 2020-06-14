@@ -127,7 +127,6 @@ open class Authenticator: NSObject {
     private var currentAction: Action = .mrzInfo
     //private var user: PublicKeyCredentialUserEntity = PublicKeyCredentialUserEntity()
 
-    private var nfcSessionStateObservation: NSKeyValueObservation?
     private var sceneObserver: SceneObserver?
     private var mrzKey: String = ""
     private var passportModel : NFCPassportModel?
@@ -145,7 +144,7 @@ open class Authenticator: NSObject {
 
     private var scanCompletionHandler: ScanHandler?
 
-    private var mrzScannerView: QKMRZScannerView = QKMRZScannerView()
+    //private var mrzScannerView: QKMRZScannerView = QKMRZScannerView()
     private let passportReader = SvipeReader()
     private var faceView: FaceView = FaceView()
 

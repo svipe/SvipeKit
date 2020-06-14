@@ -461,6 +461,7 @@ class ActionSheetView: UIView {
             faceView.delegate = faceViewDelegate
             faceView.start(with: image, and: nil, size: 160.0)
         }
+        
         messageLabel.text = message
     }
     

@@ -252,7 +252,7 @@ SPEC CHECKSUMS:
   CryptoSwift: f12f037f6d0fcd6d48c96db0071b653de64e6c4d
   DeepLinkKit: 9f300348cbb20ef8389a5018a57d8c9952b1831c
   FaceCropper: 5037221c279db6ae3cea68e76ac4165c85c7c291
-  FaceVerifier: 2a3312219fe37af33992271f6d16cb1df6440996
+  FaceVerifier: 4079e1be24ff5c755b5e9b82b2168c2f6d2a2047
   KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
   OrderedDictionary: f485269ff07966397900f549492b84596d00188c
   PotentASN1: d6c1a0d1dabe6aac8530c5baa0e53d81afca05d2

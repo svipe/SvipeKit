@@ -16,10 +16,33 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>svipeid</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NFCReaderUsageDescription</key>
+	<string>To read the chip in your id document</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>To communicate with other app holders</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>To communicate with other app holders</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>To merge your event history with your Calendar</string>
+	<key>NSCameraUsageDescription</key>
+	<string>To scan QR codes and your face</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>To keep your keys and private data safe</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -60,30 +83,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>NFCReaderUsageDescription</key>
-    <string>To read the chip in your id document</string>
-    <key>NSCalendarsUsageDescription</key>
-    <string>To merge your event history with your Calendar</string>
-    <key>NSCameraUsageDescription</key>
-    <string>To scan QR codes and your face</string>
-    <key>NSFaceIDUsageDescription</key>
-    <string>To keep your keys and private data safe</string>
-    <key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
-    <array>
-        <string>com.apple.developer.nfc.readersession.iso7816.select-identifiers</string>
-        <string>A0000002471001</string>
-        <string>D2760000850101</string>
-    </array>
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleTypeRole</key>
-            <string>Editor</string>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>svipeid</string>
-            </array>
-        </dict>
-    </array>
+	<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+	<array>
+		<string>com.apple.developer.nfc.readersession.iso7816.select-identifiers</string>
+		<string>A0000002471001</string>
+		<string>D2760000850101</string>
+	</array>
 </dict>
 </plist>
