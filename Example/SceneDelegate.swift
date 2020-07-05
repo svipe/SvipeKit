@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DeepLinkKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

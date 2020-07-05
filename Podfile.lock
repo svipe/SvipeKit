@@ -64,6 +64,7 @@ PODS:
     - ShieldX500
   - STRegex (2.1.1)
   - SvipeCA (0.0.1):
+    - RealmSwift
     - SvipeCommon
     - SvipeReader
     - SvipeStore
@@ -271,7 +272,7 @@ SPEC CHECKSUMS:
   ShieldX500: 5ea0db77f5bb76e6619aad394c11ea5cd3b3cc34
   ShieldX509: 902025764ae1e4a0ae406c3654b881e9216e6dd5
   STRegex: d49e88d0fe58538d3175fdd989bc1243b9be2a07
-  SvipeCA: 77757566d0756b410870ba143d4ee9487a0e159a
+  SvipeCA: c7774a7c8921f5bce7b5b6197a7c4c2182c90abd
   SvipeCommon: 09521621aebf90c3c7a5ba8245fb4d94e7e3b391
   SvipeKit: 31ad2dfbb9ee80bfdb70f13df18a6d6408ae43ed
   SvipeMRZ: d67fa36805dc532420660d51329c695518dd51ce
@@ -281,6 +282,6 @@ SPEC CHECKSUMS:
   SwiftyBeaver: a1f5691458561414bcfab51874b2b7445451602b
   SwiftyTesseract: a05d2c6771872f203a9ba65055cb2a8b6a385552
 
-PODFILE CHECKSUM: 23d3675fc6e4908883dfebadcfa53e3d6ba2f807
+PODFILE CHECKSUM: a41e8d1c6e061b6a7ef9ae4cb65fe2fa58951571
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3

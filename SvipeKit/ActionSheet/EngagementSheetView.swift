@@ -64,11 +64,9 @@ class EngagementSheetView: UIView {
     @IBOutlet var messageLabel: UILabel!
     
     @IBAction func svipeVerification(_ sender: Any) {
-        
         let urlString = "https://svipe.com"
         if let url = URL(string: urlString ) {
            UIApplication.shared.open(url, options: [:]) { (success) in
-               
            }
         }
     }

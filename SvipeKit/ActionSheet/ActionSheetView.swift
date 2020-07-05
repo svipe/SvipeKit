@@ -92,7 +92,7 @@ class ActionSheetView: UIView {
     @IBOutlet weak var passportImageView: UIImageView!
     
     @IBOutlet weak var faceImageView: UIImageView!
-    
+    @IBOutlet weak var faceContainerView: UIView!
     @IBOutlet weak var faceView: FaceView!
     @IBOutlet weak var mrzView: QKMRZScannerView!
     @IBOutlet var keyActionContainerView: UIView!
@@ -172,6 +172,8 @@ class ActionSheetView: UIView {
         keyImageView.isHidden = false
         mrzView.isHidden = true
         faceView.isHidden = true
+        faceContainerView.isHidden = true
+        faceContainerView.isHidden = true
         keyActionContainerView.isHidden = false
         borderView.isHidden = false
         passportImageView.isHidden = true
@@ -190,6 +192,8 @@ class ActionSheetView: UIView {
         faceImageView.isHidden = true
         mrzView.isHidden = true
         faceView.isHidden = true
+        faceContainerView.isHidden = true
+        faceContainerView.isHidden = true
         keyActionContainerView.isHidden = false
         borderView.isHidden = false
         pinView.isHidden = true
@@ -213,6 +217,7 @@ class ActionSheetView: UIView {
         faceImageView.isHidden = false
         mrzView.isHidden = true
         faceView.isHidden = true
+        faceContainerView.isHidden = true
         faceView.didMatch = false
         keyActionContainerView.isHidden = false
         borderView.isHidden = false
@@ -241,6 +246,7 @@ class ActionSheetView: UIView {
         faceImageView.isHidden = true
         mrzView.isHidden = true
         faceView.isHidden = true
+        faceContainerView.isHidden = true
         keyActionContainerView.isHidden = false
         borderView.isHidden = false
         pinView.isHidden = true
@@ -257,6 +263,7 @@ class ActionSheetView: UIView {
         faceImageView.isHidden = true
         mrzView.isHidden = true
         faceView.isHidden = true
+        faceContainerView.isHidden = true
         keyActionContainerView.isHidden = false
         borderView.isHidden = false
         pinView.isHidden = true
@@ -278,6 +285,7 @@ class ActionSheetView: UIView {
         faceImageView.isHidden = true
         mrzView.isHidden = true
         faceView.isHidden = true
+        faceContainerView.isHidden = true
         keyActionContainerView.isHidden = false
         borderView.isHidden = false
         pinView.isHidden = true
@@ -301,6 +309,7 @@ class ActionSheetView: UIView {
         faceImageView.isHidden = true
         mrzView.isHidden = true
         faceView.isHidden = true
+        faceContainerView.isHidden = true
         keyActionContainerView.isHidden = false
         borderView.isHidden = false
         pinView.isHidden = true
@@ -317,6 +326,7 @@ class ActionSheetView: UIView {
         keyActionContainerView.isHidden = true
         borderView.isHidden = true
         faceView.isHidden = true
+        faceContainerView.isHidden = true
         mrzView.isHidden = false
         pinView.isHidden = true
         passportImageView.isHidden = true
@@ -334,6 +344,7 @@ class ActionSheetView: UIView {
         keyActionContainerView.isHidden = true
         borderView.isHidden = true
         faceView.isHidden = true
+        faceContainerView.isHidden = true
         mrzView.isHidden = true
         pinView.isHidden = true
         pinView.isHidden = false
@@ -351,7 +362,8 @@ class ActionSheetView: UIView {
         keyActionContainerView.isHidden = true
         borderView.isHidden = true
         faceView.isHidden = false
-        mrzView.isHidden = false
+        faceContainerView.isHidden = false
+        mrzView.isHidden = true
         pinView.isHidden = true
         frameView.isHidden = false
         passportImageView.isHidden = true
@@ -455,19 +467,18 @@ class ActionSheetView: UIView {
     
     func facePreview(message: String, faceViewDelegate: FaceViewDelegate, image: UIImage? = nil) {
         
-        if /*let model = try? VNCoreMLModel(for: Facenet().model),*/
-            let image = image {
+        if let image = image {
             setupFacePreview(image: image)
             faceView.delegate = faceViewDelegate
             faceView.start(with: image, and: nil, size: 160.0)
         }
-        
         messageLabel.text = message
     }
     
     // MARK: - Presentation
     
     func present(animated: Bool, completion: @escaping ()->Void) {
+        
         guard !isPresenting else {
             return
         }

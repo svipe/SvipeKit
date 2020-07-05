@@ -68,7 +68,7 @@ target 'SvipeKit' do
   pod 'BluetoothKit', :git => 'https://github.com/svipe/BluetoothKit.git', :branch => :master
   
   # original
-  
+
   target 'SvipeKitTests' do
     # Pods for testing
   end

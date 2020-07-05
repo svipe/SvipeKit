@@ -171,9 +171,18 @@ open class Authenticator: NSObject {
     }
     
     @objc
-    public func scanDocument(_ completion: @escaping ScanHandler) {
-        scanCompletionHandler = completion
-        doAction()
+    public func scanDocument(callbackURL: String, _ completion: @escaping ScanHandler) {
+
+        if let callbackURLString = callbackURL.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed), let url = URL(string: "https://login.svipe.io/?client_id="+callbackURLString), UIApplication.shared.canOpenURL(url) {
+            
+            UIApplication.shared.open(url, options: [:]) { (success) in
+                print("open url \(url) with \(success)")
+            }
+        } else {
+            scanCompletionHandler = completion
+            doAction()
+        }
+
     }
     
     /*

@@ -10,18 +10,19 @@ import UIKit
 import SvipeKit
 
 class ViewController: UIViewController {
+
     let auth = SvipeKit.Authenticator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func scanDocument(_ sender: Any) {
-        auth.scanDocument { (passport, error) in
+
+        auth.scanDocument(callbackURL: "https://demo.svipe.io/callback") { (passport, error) in
             print(passport)
         }
     }
-    
+
 }
 
