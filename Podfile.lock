@@ -28,11 +28,11 @@ PODS:
   - PromiseKit/UIKit (6.13.1):
     - PromiseKit/CorePromise
   - QKMRZParser (1.0.1)
-  - Realm (5.0.2):
-    - Realm/Headers (= 5.0.2)
-  - Realm/Headers (5.0.2)
-  - RealmSwift (5.0.2):
-    - Realm (= 5.0.2)
+  - Realm (5.1.0):
+    - Realm/Headers (= 5.1.0)
+  - Realm/Headers (5.1.0)
+  - RealmSwift (5.1.0):
+    - Realm (= 5.1.0)
   - Shield (0.0.1):
     - PotentCodables
     - ShieldCrypto
@@ -262,8 +262,8 @@ SPEC CHECKSUMS:
   PotentJSON: d2ec2755a6ac2101e393e97a0ea7304f6355ed1f
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   QKMRZParser: 07921dbffa7e4064406113731bc0f1f5e6210bce
-  Realm: 6b6f096671b64b04d08974177cabb2ff9343d153
-  RealmSwift: a3db6be0488bf3e1d5314c2956cefe98a65cdd01
+  Realm: bdea546851e37b4cf0a2400cef115c7c26fda488
+  RealmSwift: 70945aa168db93b215c460e9c8ef680261aa28af
   Shield: dca5255c7af479da19cd4f6fa68d0fa5d40d52bd
   ShieldCrypto: 1ce20b0512a953c41eb59d9443c5f790ead06a1b
   ShieldOID: db707df6516781eec31b5a92be1987a4fcb507c6

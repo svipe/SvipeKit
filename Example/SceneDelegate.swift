@@ -9,16 +9,51 @@
 import UIKit
 import DeepLinkKit
 
+
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    func handleDeepLinkUrl(_ url: URL?) -> Bool {
 
+        guard let url = url else {return false}
+        print("handleDeepLinkUrl \(url) ")
+        var resultText = ""
+
+        guard let str = url.absoluteString.removingPercentEncoding, let components = URLComponents(string: str) else {
+            return false
+        }
+
+        print("components.queryItems \(components.queryItems)")
+        if let items = components.queryItems {
+            print("items \(items)")
+            for item in items {
+                var value = ""
+                if let v = item.value {
+                    value = v
+                }
+                resultText += item.name + "=" + value + "\n"
+            }
+        }
+        print("resultText \(resultText)")
+        if let viewController = window?.rootViewController as? ViewController {
+            viewController.resultText.text = resultText
+            viewController.loginButton.isHidden = true
+        }
+
+        return true
+    }
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        print("SceneDelegate 1")
+        handleDeepLinkUrl(connectionOptions.urlContexts.first?.url)
+        handleDeepLinkUrl(connectionOptions.userActivities.first?.webpageURL)
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -50,5 +85,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        print("SceneDelegate 2")
+        let handled = handleDeepLinkUrl(URLContexts.first?.url)
+        print("handled \(handled)")
+    }
+
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        print("SceneDelegate 3")
+        let handled = handleDeepLinkUrl(userActivity.webpageURL)
+        print("handled \(handled)")
+
+
+    }
 }
 

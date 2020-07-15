@@ -121,7 +121,9 @@ open class Authenticator: NSObject {
             
         }
     }
-    
+
+    private var csr: CertificateSigningRequest?
+
     public var delegate: SvipeAuthenticationButtonDelegate?
 
     private var currentAction: Action = .mrzInfo
@@ -169,12 +171,27 @@ open class Authenticator: NSObject {
             Log.error("Could not get window")
         }
     }
-    
+
+    @objc
+    public func signDocument(callbackURL: String, csr: CertificateSigningRequest, _ completion: @escaping ScanHandler) {
+
+        self.csr = csr
+
+        if let callbackURLString = callbackURL.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed), let url = URL(string: "https://login.svipe.io/?client_id="+callbackURLString), let customURL = URL(string:"svipe:"),  UIApplication.shared.canOpenURL(customURL) {
+            UIApplication.shared.open(url, options: [:]) { (success) in
+                print("open url \(url) with \(success)")
+            }
+        } else {
+            scanCompletionHandler = completion
+            doAction()
+        }
+
+    }
+
     @objc
     public func scanDocument(callbackURL: String, _ completion: @escaping ScanHandler) {
 
-        if let callbackURLString = callbackURL.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed), let url = URL(string: "https://login.svipe.io/?client_id="+callbackURLString), UIApplication.shared.canOpenURL(url) {
-            
+        if let callbackURLString = callbackURL.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed), let url = URL(string: "https://login.svipe.io/?client_id="+callbackURLString), let customURL = URL(string:"svipe:"),  UIApplication.shared.canOpenURL(customURL) {
             UIApplication.shared.open(url, options: [:]) { (success) in
                 print("open url \(url) with \(success)")
             }

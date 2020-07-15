@@ -11,6 +11,8 @@ import SvipeKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet public weak var resultText: UITextView!
+    @IBOutlet weak var loginButton: UIButton!
     let auth = SvipeKit.Authenticator()
     
     override func viewDidLoad() {
@@ -18,9 +20,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func scanDocument(_ sender: Any) {
-
         auth.scanDocument(callbackURL: "https://demo.svipe.io/callback") { (passport, error) in
-            print(passport)
+
+            if let first = passport?.firstName, let last = passport?.lastName {
+                self.resultText.text = first + " " + last
+            }
+            
         }
     }
 

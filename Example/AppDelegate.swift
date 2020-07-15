@@ -9,9 +9,17 @@
 import UIKit
 import DeepLinkKit
 
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    func handleDeepLinkUrl(_ url: URL?) -> Bool {
+        guard let url = url else {return false}
+        print("handleDeepLinkUrl \(url) ")
+        return true
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
@@ -31,5 +39,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity,
+     restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        print("AppDelegate 1")
+        return handleDeepLinkUrl(userActivity.webpageURL)
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool{
+    //first launch after install
+        print("AppDelegate 2")
+        return handleDeepLinkUrl(url)
+    }
+
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool{
+    //first launch after install for older iOS version
+        print("AppDelegate 3")
+        return handleDeepLinkUrl(url)
+    }
 }
 

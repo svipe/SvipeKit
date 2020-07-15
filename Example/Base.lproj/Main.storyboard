@@ -19,20 +19,35 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgu-Rr-13Q">
                                 <rect key="frame" x="77" y="832" width="260" height="30"/>
-                                <state key="normal" title="Login with Svipe"/>
+                                <state key="normal" title="Sign in with Svipe"/>
                                 <connections>
                                     <action selector="scanDocument:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vWq-EP-CXO"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bhq-hR-o5d">
+                                <rect key="frame" x="77" y="299" width="259" height="298"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Bhq-hR-o5d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="255" id="1xr-SS-BM0"/>
                             <constraint firstItem="Dgu-Rr-13Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="539-gl-irx"/>
                             <constraint firstItem="Dgu-Rr-13Q" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AJH-co-6uu"/>
+                            <constraint firstItem="Bhq-hR-o5d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CZs-Vr-5hh"/>
+                            <constraint firstItem="Bhq-hR-o5d" firstAttribute="centerX" secondItem="Dgu-Rr-13Q" secondAttribute="centerX" id="dpz-5R-ZR5"/>
+                            <constraint firstItem="Bhq-hR-o5d" firstAttribute="leading" secondItem="Dgu-Rr-13Q" secondAttribute="leading" id="pUE-hT-4SC"/>
                             <constraint firstItem="Dgu-Rr-13Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="uR2-Ya-GIK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="Dgu-Rr-13Q" id="U4C-zf-PO6"/>
+                        <outlet property="resultText" destination="Bhq-hR-o5d" id="uts-EN-eWe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,6 +55,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
