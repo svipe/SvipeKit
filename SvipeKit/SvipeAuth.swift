@@ -28,12 +28,12 @@ public enum AuthenticationProtocol {
     }
 }
 
-public typealias ScanHandler = ((_ passport: Passport?, _ error: Error? ) -> Void)
+public typealias ScanHandler = ((_ passport: CredentialDocument?, _ error: Error? ) -> Void)
 
 public protocol SvipeAuthenticationButtonDelegate {
     func didCancel()
     func didFail()
-    func didSucceed(passport: Passport)
+    func didSucceed(passport: CredentialDocument)
 }
 
 public protocol PinEntryDelegate {
@@ -145,6 +145,7 @@ open class Authenticator: NSObject {
     private let bundle = Bundle(for: Authenticator.self)
 
     private var scanCompletionHandler: ScanHandler?
+    private var documentFilter: [SupportedClaim] = [SupportedClaim]()
 
     //private var mrzScannerView: QKMRZScannerView = QKMRZScannerView()
     private let passportReader = SvipeReader()
@@ -177,20 +178,20 @@ open class Authenticator: NSObject {
 
         self.csr = csr
 
-        if let callbackURLString = callbackURL.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed), let url = URL(string: "https://login.svipe.io/?client_id="+callbackURLString), let customURL = URL(string:"svipe:"),  UIApplication.shared.canOpenURL(customURL) {
+        if let callbackURLString = callbackURL.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed), let url = JOSE.createOpenidRequestURL(privateKey: nil, callbackURLString: callbackURL, mandatoryClaims: [.email], optionalClaims: []), let customURL = URL(string:"svipe:"),  UIApplication.shared.canOpenURL(customURL) {
             UIApplication.shared.open(url, options: [:]) { (success) in
                 print("open url \(url) with \(success)")
             }
         } else {
             scanCompletionHandler = completion
+            documentFilter = [.email]
             doAction()
         }
-
     }
 
+    /*
     @objc
     public func scanDocument(callbackURL: String, _ completion: @escaping ScanHandler) {
-
         if let callbackURLString = callbackURL.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed), let url = URL(string: "https://login.svipe.io/?client_id="+callbackURLString), let customURL = URL(string:"svipe:"),  UIApplication.shared.canOpenURL(customURL) {
             UIApplication.shared.open(url, options: [:]) { (success) in
                 print("open url \(url) with \(success)")
@@ -199,8 +200,8 @@ open class Authenticator: NSObject {
             scanCompletionHandler = completion
             doAction()
         }
-
     }
+    */
     
     /*
      The normal flow is according to the switch below
@@ -343,8 +344,9 @@ open class Authenticator: NSObject {
                 quit()
                 return
             }
-            let passport = Passport(model: model)
-            guard let image = passport.image() else {
+
+            let passport = CredentialDocument(model: model)
+            guard let image = passport.image else {
                 return
             }
             currentAction = .faceScan
@@ -359,8 +361,8 @@ open class Authenticator: NSObject {
         currentAction = .issuing
                    
        #if IOS_SIMULATOR || arch(i386) || arch(x86_64)
-        var passport = Passport(isDemo: true)
-        self.selfie = passport.image()
+        var passport = CredentialDocument(isDemo: true)
+        self.selfie = passport.image
         self.passportModel = NFCPassportModel()
         guard let model = self.passportModel, let selfie = self.selfie else {
             self.perform(#selector(self.errorMessage), with: "No model or selfie", afterDelay: 1)
@@ -371,13 +373,14 @@ open class Authenticator: NSObject {
             self.perform(#selector(self.errorMessage), with: "No model or selfie", afterDelay: 1)
             return
         }
-        var passport = Passport(model: model)
+        var passport = CredentialDocument(model: model)
        #endif
            
         presentProgress(message: "Verifying and issuing credentials ", action: currentAction)
     
         if !UIDevice.isSimulator {
-            SvipeCA.verify(model: model, passport: passport, selfie: selfie) { (data, error) in
+            SvipeCA.verify(model: model, selfie: selfie) { (data, error) in
+                
                 if let error = error  {
                     Log.error(error.localizedDescription)
                     self.perform(#selector(self.errorMessage), with: "Could not verify document:" + error.localizedDescription, afterDelay: 1)
@@ -425,9 +428,9 @@ open class Authenticator: NSObject {
         perform(#selector(done), with: nil, afterDelay: currentAction.timeout)
         if let model = self.passportModel {
             #if IOS_SIMULATOR || arch(i386) || arch(x86_64)
-            let passport = Passport(isDemo: true)
+            let passport = CredentialDocument(isDemo: true)
             #else
-            let passport = Passport(model: model)
+            let passport = CredentialDocument(model: model)
             #endif
             print(passport)
             quit()
