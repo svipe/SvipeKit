@@ -7,6 +7,7 @@ PODS:
   - FaceCropper (1.0.0)
   - FaceVerifier (0.0.1):
     - FaceCropper
+  - JOSESwift (2.2.1)
   - KeychainSwift (19.0.0)
   - OrderedDictionary (0.0.1)
   - PotentASN1 (0.0.1):
@@ -64,7 +65,9 @@ PODS:
     - ShieldX500
   - STRegex (2.1.1)
   - SvipeCA (0.0.1):
+    - JOSESwift
     - RealmSwift
+    - ShieldX509
     - SvipeCommon
     - SvipeReader
     - SvipeStore
@@ -87,12 +90,13 @@ PODS:
     - BigInt
     - BluetoothKit
     - CryptoSwift
+    - JOSESwift
     - KeychainSwift
     - PotentCBOR
     - PotentCodables
-    - RealmSwift
     - Shield
     - SvipeCommon
+    - SvipeReader
     - SwiftCBOR
     - SwiftyBeaver
   - SwiftCBOR (0.4.3)
@@ -129,6 +133,7 @@ SPEC REPOS:
     - CryptoSwift
     - DeepLinkKit
     - FaceCropper
+    - JOSESwift
     - KeychainSwift
     - PromiseKit
     - QKMRZParser
@@ -254,6 +259,7 @@ SPEC CHECKSUMS:
   DeepLinkKit: 9f300348cbb20ef8389a5018a57d8c9952b1831c
   FaceCropper: 5037221c279db6ae3cea68e76ac4165c85c7c291
   FaceVerifier: 4079e1be24ff5c755b5e9b82b2168c2f6d2a2047
+  JOSESwift: d65ba32c7bceae9982e85e62d35de1f8d135cc89
   KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
   OrderedDictionary: f485269ff07966397900f549492b84596d00188c
   PotentASN1: d6c1a0d1dabe6aac8530c5baa0e53d81afca05d2
@@ -272,12 +278,12 @@ SPEC CHECKSUMS:
   ShieldX500: 5ea0db77f5bb76e6619aad394c11ea5cd3b3cc34
   ShieldX509: 902025764ae1e4a0ae406c3654b881e9216e6dd5
   STRegex: d49e88d0fe58538d3175fdd989bc1243b9be2a07
-  SvipeCA: c7774a7c8921f5bce7b5b6197a7c4c2182c90abd
+  SvipeCA: b3c2f2e8aa2c3dfc19974bea896db66d619d3cc1
   SvipeCommon: 09521621aebf90c3c7a5ba8245fb4d94e7e3b391
   SvipeKit: 31ad2dfbb9ee80bfdb70f13df18a6d6408ae43ed
   SvipeMRZ: d67fa36805dc532420660d51329c695518dd51ce
   SvipeReader: 54cf47372cc88fa1c2e0b8197c9fb94d99b62624
-  SvipeStore: 2e9c807671e4e7f9c24031965a25c25b841e8f53
+  SvipeStore: 7bbc4bf7d34b6e3d1bfce9181b3db57d5972e619
   SwiftCBOR: c7d740966575e0fd5d971466de2b6776db3f10c3
   SwiftyBeaver: a1f5691458561414bcfab51874b2b7445451602b
   SwiftyTesseract: a05d2c6771872f203a9ba65055cb2a8b6a385552

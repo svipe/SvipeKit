@@ -5,6 +5,7 @@ import FaceVerifier
 import CoreNFC
 import SvipeMRZ
 import SvipeCA
+import CryptoSwift
 
 public enum AuthenticationProtocol {
     case openid
@@ -122,7 +123,7 @@ open class Authenticator: NSObject {
         }
     }
 
-    private var csr: CertificateSigningRequest?
+    private var credentialName: String?
 
     public var delegate: SvipeAuthenticationButtonDelegate?
 
@@ -173,12 +174,11 @@ open class Authenticator: NSObject {
         }
     }
 
-    @objc
-    public func signDocument(callbackURL: String, csr: CertificateSigningRequest, _ completion: @escaping ScanHandler) {
+    public func authenticate(callbackURL: String, credentialName: String, mandatoryClaims: [SupportedClaim], optionalClaims: [SupportedClaim],  _ completion: @escaping ScanHandler) {
 
-        self.csr = csr
+        self.credentialName = credentialName
 
-        if let callbackURLString = callbackURL.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed), let url = JOSE.createOpenidRequestURL(privateKey: nil, callbackURLString: callbackURL, mandatoryClaims: [.email], optionalClaims: []), let customURL = URL(string:"svipe:"),  UIApplication.shared.canOpenURL(customURL) {
+        if let callbackURLString = callbackURL.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed), let url = JOSE.createOpenidRequestURL(privateKey: nil, callbackURLString: callbackURL, credentialName: credentialName, mandatoryClaims: mandatoryClaims, optionalClaims:  optionalClaims), let customURL = URL(string:"svipe:"),  UIApplication.shared.canOpenURL(customURL) {
             UIApplication.shared.open(url, options: [:]) { (success) in
                 print("open url \(url) with \(success)")
             }
@@ -392,7 +392,7 @@ open class Authenticator: NSObject {
                     }
                     
                     if let response = try? JSONDecoder().decode(IssuerResponseDataObject.self, from: data) {
-                        let signBytes =  ByteArray(Data(hex:response.signing.issuerAuth))
+                        let signBytes =  ByteArray(Data(hex:response.signing.first!.issuerAuth))
                         let coseSign1 = CoseSign1.Builder().decode(coseSign1Data: signBytes).build()
                         print(coseSign1)
                         
@@ -406,14 +406,13 @@ open class Authenticator: NSObject {
                             print("No certificate")
                         }
                         
-                        let issuerBytes = ByteArray(Data(hex:response.signing.issuerNameSpaces))
+                        let issuerBytes = ByteArray(Data(hex:response.signing.first!.issuerNameSpaces))
                         if let issuerNameSpaces = try? IssuerNameSpaces.Builder().decode(data: issuerBytes) {
                             print(issuerNameSpaces)
                         } else {
                             print("could not decode IssuerNameSpaces")
                         }
                     }
-                    
                     self.success()
                 }
             }
