@@ -20,14 +20,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func scanDocument(_ sender: Any) {
-        auth.scanDocument(callbackURL: "https://demo.svipe.io/callback") { (passport, error) in
-
+        auth.authenticate(callbackURL: "https://demo.svipe.io/callback", credentialName: "nisse", mandatoryClaims: [], optionalClaims: []) { (passport, error) in
             if let first = passport?.firstName, let last = passport?.lastName {
                 self.resultText.text = first + " " + last
             }
-            
         }
     }
-
 }
 

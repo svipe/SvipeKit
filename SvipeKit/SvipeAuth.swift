@@ -397,7 +397,7 @@ open class Authenticator: NSObject {
                         print(coseSign1)
                         
                         if let bytes = coseSign1.dsCertificateBytes {
-                            let rootCertificateInitialiser = RootCertificateInitialiser()
+                            let rootCertificateInitialiser = try! RootCertificateInitialiser()
                             let rootCertificatesAndPublicKeys = rootCertificateInitialiser.rootCertificatesAndPublicKeys
                             if let certificate = try? DSCertificate(bytes: bytes, rootCertificatesAndPublicKeys: rootCertificatesAndPublicKeys, issuingCountry: nil) {
                                 print(certificate.x509Certificate)
