@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary  = 'Svipe ID Kit'
   s.homepage = 'https://gitlab.com/svipe/frontend-ios/SvipeKit'
   s.author   = 'Svipe AB'
-  s.source   = { :git => 'https://gitlab.com/svipe/frontend-ios/SvipeKit.git', :tag => s.version }
+  s.source   = { :git => 'git@gitlab.com:svipe/frontend-ios/SvipeKit.git', :tag => s.version }
   s.requires_arc = true
   s.source_files = 'SvipeKit/**/*.{h,m,swift,mlmodel}'
   s.resources = "SvipeKit/**/*.{storyboard,xib,xcassets,strings,json,xml,pem,traineddata}"

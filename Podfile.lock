@@ -107,27 +107,27 @@ PODS:
 
 DEPENDENCIES:
   - ASN1Decoder (from `https://github.com/filom/ASN1Decoder`, branch `master`)
-  - BluetoothKit (from `https://gitlab.com/svipe/frontend-ios/BluetoothKit.git`, branch `master`)
+  - BluetoothKit (from `git@gitlab.com:svipe/frontend-ios/BluetoothKit.git`, branch `master`)
   - FaceVerifier (from `../FaceVerifier`)
-  - OrderedDictionary (from `https://gitlab.com/svipe/frontend-ios/OrderedDictionary.git`, branch `master`)
-  - PotentASN1 (from `https://gitlab.com/svipe/frontend-ios/PotentCodables.git`, branch `master`)
-  - PotentCBOR (from `https://gitlab.com/svipe/frontend-ios/PotentCodables.git`, branch `master`)
-  - PotentCodables (from `https://gitlab.com/svipe/frontend-ios/PotentCodables.git`, branch `master`)
-  - PotentJSON (from `https://gitlab.com/svipe/frontend-ios/PotentCodables.git`, branch `master`)
-  - Shield (from `https://gitlab.com/svipe/frontend-ios/Shield.git`, branch `master`)
-  - ShieldCrypto (from `https://gitlab.com/svipe/frontend-ios/Shield.git`, branch `master`)
-  - ShieldOID (from `https://gitlab.com/svipe/frontend-ios/Shield.git`, branch `master`)
-  - ShieldPKCS (from `https://gitlab.com/svipe/frontend-ios/Shield.git`, branch `master`)
-  - ShieldSecurity (from `https://gitlab.com/svipe/frontend-ios/Shield.git`, branch `master`)
-  - ShieldX500 (from `https://gitlab.com/svipe/frontend-ios/Shield.git`, branch `master`)
-  - ShieldX509 (from `https://gitlab.com/svipe/frontend-ios/Shield.git`, branch `master`)
+  - OrderedDictionary (from `git@gitlab.com:svipe/frontend-ios/OrderedDictionary.git`, branch `master`)
+  - PotentASN1 (from `git@gitlab.com:svipe/frontend-ios/PotentCodables.git`, branch `master`)
+  - PotentCBOR (from `git@gitlab.com:svipe/frontend-ios/PotentCodables.git`, branch `master`)
+  - PotentCodables (from `git@gitlab.com:svipe/frontend-ios/PotentCodables.git`, branch `master`)
+  - PotentJSON (from `git@gitlab.com:svipe/frontend-ios/PotentCodables.git`, branch `master`)
+  - Shield (from `git@gitlab.com:svipe/frontend-ios/Shield.git`, branch `master`)
+  - ShieldCrypto (from `git@gitlab.com:svipe/frontend-ios/Shield.git`, branch `master`)
+  - ShieldOID (from `git@gitlab.com:svipe/frontend-ios/Shield.git`, branch `master`)
+  - ShieldPKCS (from `git@gitlab.com:svipe/frontend-ios/Shield.git`, branch `master`)
+  - ShieldSecurity (from `git@gitlab.com:svipe/frontend-ios/Shield.git`, branch `master`)
+  - ShieldX500 (from `git@gitlab.com:svipe/frontend-ios/Shield.git`, branch `master`)
+  - ShieldX509 (from `git@gitlab.com:svipe/frontend-ios/Shield.git`, branch `master`)
   - SvipeCA (from `../SvipeCA`)
   - SvipeCommon (from `../SvipeCommon`)
   - SvipeKit (from `.`)
   - SvipeMRZ (from `../SvipeMRZ`)
   - SvipeReader (from `../SvipeReader`)
   - SvipeStore (from `../SvipeStore`)
-  - SwiftyTesseract (from `https://gitlab.com/svipe/frontend-ios/SwiftyTesseract.git`, branch `master`)
+  - SwiftyTesseract (from `git@gitlab.com:svipe/frontend-ios/SwiftyTesseract.git`, branch `master`)
 
 SPEC REPOS:
   trunk:
@@ -152,45 +152,45 @@ EXTERNAL SOURCES:
     :git: https://github.com/filom/ASN1Decoder
   BluetoothKit:
     :branch: :master
-    :git: https://gitlab.com/svipe/frontend-ios/BluetoothKit.git
+    :git: git@gitlab.com:svipe/frontend-ios/BluetoothKit.git
   FaceVerifier:
     :path: "../FaceVerifier"
   OrderedDictionary:
     :branch: :master
-    :git: https://gitlab.com/svipe/frontend-ios/OrderedDictionary.git
+    :git: git@gitlab.com:svipe/frontend-ios/OrderedDictionary.git
   PotentASN1:
     :branch: :master
-    :git: https://gitlab.com/svipe/frontend-ios/PotentCodables.git
+    :git: git@gitlab.com:svipe/frontend-ios/PotentCodables.git
   PotentCBOR:
     :branch: :master
-    :git: https://gitlab.com/svipe/frontend-ios/PotentCodables.git
+    :git: git@gitlab.com:svipe/frontend-ios/PotentCodables.git
   PotentCodables:
     :branch: :master
-    :git: https://gitlab.com/svipe/frontend-ios/PotentCodables.git
+    :git: git@gitlab.com:svipe/frontend-ios/PotentCodables.git
   PotentJSON:
     :branch: :master
-    :git: https://gitlab.com/svipe/frontend-ios/PotentCodables.git
+    :git: git@gitlab.com:svipe/frontend-ios/PotentCodables.git
   Shield:
     :branch: :master
-    :git: https://gitlab.com/svipe/frontend-ios/Shield.git
+    :git: git@gitlab.com:svipe/frontend-ios/Shield.git
   ShieldCrypto:
     :branch: :master
-    :git: https://gitlab.com/svipe/frontend-ios/Shield.git
+    :git: git@gitlab.com:svipe/frontend-ios/Shield.git
   ShieldOID:
     :branch: :master
-    :git: https://gitlab.com/svipe/frontend-ios/Shield.git
+    :git: git@gitlab.com:svipe/frontend-ios/Shield.git
   ShieldPKCS:
     :branch: :master
-    :git: https://gitlab.com/svipe/frontend-ios/Shield.git
+    :git: git@gitlab.com:svipe/frontend-ios/Shield.git
   ShieldSecurity:
     :branch: :master
-    :git: https://gitlab.com/svipe/frontend-ios/Shield.git
+    :git: git@gitlab.com:svipe/frontend-ios/Shield.git
   ShieldX500:
     :branch: :master
-    :git: https://gitlab.com/svipe/frontend-ios/Shield.git
+    :git: git@gitlab.com:svipe/frontend-ios/Shield.git
   ShieldX509:
     :branch: :master
-    :git: https://gitlab.com/svipe/frontend-ios/Shield.git
+    :git: git@gitlab.com:svipe/frontend-ios/Shield.git
   SvipeCA:
     :path: "../SvipeCA"
   SvipeCommon:
@@ -205,7 +205,7 @@ EXTERNAL SOURCES:
     :path: "../SvipeStore"
   SwiftyTesseract:
     :branch: :master
-    :git: https://gitlab.com/svipe/frontend-ios/SwiftyTesseract.git
+    :git: git@gitlab.com:svipe/frontend-ios/SwiftyTesseract.git
 
 CHECKOUT OPTIONS:
   ASN1Decoder:
@@ -213,46 +213,46 @@ CHECKOUT OPTIONS:
     :git: https://github.com/filom/ASN1Decoder
   BluetoothKit:
     :commit: 046246643a7bb00cd8736bc0d5f6cc2e9d622dde
-    :git: https://gitlab.com/svipe/frontend-ios/BluetoothKit.git
+    :git: git@gitlab.com:svipe/frontend-ios/BluetoothKit.git
   OrderedDictionary:
     :commit: 372b7a10a916d049fe35aa14a01081dd6e25ca10
-    :git: https://gitlab.com/svipe/frontend-ios/OrderedDictionary.git
+    :git: git@gitlab.com:svipe/frontend-ios/OrderedDictionary.git
   PotentASN1:
     :commit: 79ca1edae4e1d7540bd19ce1e9782cc0ab5ec671
-    :git: https://gitlab.com/svipe/frontend-ios/PotentCodables.git
+    :git: git@gitlab.com:svipe/frontend-ios/PotentCodables.git
   PotentCBOR:
     :commit: 79ca1edae4e1d7540bd19ce1e9782cc0ab5ec671
-    :git: https://gitlab.com/svipe/frontend-ios/PotentCodables.git
+    :git: git@gitlab.com:svipe/frontend-ios/PotentCodables.git
   PotentCodables:
     :commit: 79ca1edae4e1d7540bd19ce1e9782cc0ab5ec671
-    :git: https://gitlab.com/svipe/frontend-ios/PotentCodables.git
+    :git: git@gitlab.com:svipe/frontend-ios/PotentCodables.git
   PotentJSON:
     :commit: 79ca1edae4e1d7540bd19ce1e9782cc0ab5ec671
-    :git: https://gitlab.com/svipe/frontend-ios/PotentCodables.git
+    :git: git@gitlab.com:svipe/frontend-ios/PotentCodables.git
   Shield:
     :commit: 02c8c81ac13a92ef3dc3f7083383eff31eb0d2ae
-    :git: https://gitlab.com/svipe/frontend-ios/Shield.git
+    :git: git@gitlab.com:svipe/frontend-ios/Shield.git
   ShieldCrypto:
     :commit: 02c8c81ac13a92ef3dc3f7083383eff31eb0d2ae
-    :git: https://gitlab.com/svipe/frontend-ios/Shield.git
+    :git: git@gitlab.com:svipe/frontend-ios/Shield.git
   ShieldOID:
     :commit: 02c8c81ac13a92ef3dc3f7083383eff31eb0d2ae
-    :git: https://gitlab.com/svipe/frontend-ios/Shield.git
+    :git: git@gitlab.com:svipe/frontend-ios/Shield.git
   ShieldPKCS:
     :commit: 02c8c81ac13a92ef3dc3f7083383eff31eb0d2ae
-    :git: https://gitlab.com/svipe/frontend-ios/Shield.git
+    :git: git@gitlab.com:svipe/frontend-ios/Shield.git
   ShieldSecurity:
     :commit: 02c8c81ac13a92ef3dc3f7083383eff31eb0d2ae
-    :git: https://gitlab.com/svipe/frontend-ios/Shield.git
+    :git: git@gitlab.com:svipe/frontend-ios/Shield.git
   ShieldX500:
     :commit: 02c8c81ac13a92ef3dc3f7083383eff31eb0d2ae
-    :git: https://gitlab.com/svipe/frontend-ios/Shield.git
+    :git: git@gitlab.com:svipe/frontend-ios/Shield.git
   ShieldX509:
     :commit: 02c8c81ac13a92ef3dc3f7083383eff31eb0d2ae
-    :git: https://gitlab.com/svipe/frontend-ios/Shield.git
+    :git: git@gitlab.com:svipe/frontend-ios/Shield.git
   SwiftyTesseract:
     :commit: f619483eae4e57a53f710989389bf6ab93d9e19f
-    :git: https://gitlab.com/svipe/frontend-ios/SwiftyTesseract.git
+    :git: git@gitlab.com:svipe/frontend-ios/SwiftyTesseract.git
 
 SPEC CHECKSUMS:
   ASN1Decoder: c85bbe9d75370dab47503c13c4de213adf3a1442
