@@ -64,8 +64,8 @@ target 'SvipeKit' do
   #pod 'SwiftyTesseract' , :path => 'SwiftyTesseract'
   pod 'SwiftyTesseract', :git => 'https://github.com/svipe/SwiftyTesseract.git', :branch => :master
   
-  #pod 'BluetoothKit', :path => '../BluetoothKit'
-  pod 'BluetoothKit', :git => 'https://github.com/svipe/BluetoothKit.git', :branch => :master
+  pod 'BluetoothKit', :path => '../BluetoothKit'
+  #pod 'BluetoothKit', :git => 'https://github.com/svipe/BluetoothKit.git', :branch => :master
   
   # original
 
