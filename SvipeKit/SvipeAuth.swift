@@ -5,7 +5,7 @@ import FaceVerifier
 import CoreNFC
 import SvipeMRZ
 import SvipeCA
-import CryptoSwift
+//import CryptoSwift
 
 public enum AuthenticationProtocol {
     case openid
@@ -646,6 +646,11 @@ extension Authenticator: PinEntryDelegate {
 }
 
 extension Authenticator: FaceViewDelegate {
+    
+    public func faceView(_ faceView: FaceView, didMatch face: CIImage) {
+
+    }
+
     
     public func faceView(_ faceView: FaceView, didFail message: String) {
             
